@@ -1,21 +1,5 @@
 
 body {
     font-size: 18px;
-    background: black;
-}
-
-.toastui-editor-md-tab-container .tab-item {
-    display: none;
-}
-
-.toastui-editor-toolbar {
-    display: none;
-}
-
-.toastui-editor-md-marked-text {
-    /*text-decoration: line-through;*/
-}
-
-.toastui-editor-md-container .ProseMirror {
-    font-size: 18px !important;
+    background-color: #282c34
 }
