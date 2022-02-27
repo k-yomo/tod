@@ -1,20 +1,24 @@
-import { Logo } from './logo'
+import {createRef, h} from "preact";
+import {Editor} from '@toast-ui/react-editor';
+import '@toast-ui/editor/dist/toastui-editor.css';
+import '@toast-ui/editor/dist/theme/toastui-editor-dark.css';
+import './styles/globals.css'
 
 export function App() {
-  return (
-    <>
-      <Logo />
-      <p>Hello Vite + Preact!</p>
-      <p>
-        <a
-          class="link"
-          href="https://preactjs.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Preact
-        </a>
-      </p>
-    </>
-  )
+    const editorRef = createRef();
+    return (
+        <>
+            <Editor
+                initialValue=""
+                initialEditType="markdown"
+                previewStyle="tab"
+                height="100vh"
+                useCommandShortcut
+                hideModeSwitch
+                extendedAutolinks
+                theme='dark'
+                ref={editorRef}
+            />
+        </>
+    )
 }
