@@ -1,6 +1,6 @@
-use std::path::PathBuf;
-use std::fs::{OpenOptions};
+use std::fs::OpenOptions;
 use std::io::{self, Write};
+use std::path::PathBuf;
 
 pub struct AppData {
     app_dir: Option<PathBuf>,
@@ -12,7 +12,10 @@ impl AppData {
     }
 
     fn get_data_path(&self) -> String {
-        let app_dir_path = self.app_dir.as_ref().expect("Couldn't determine app directory");
+        let app_dir_path = self
+            .app_dir
+            .as_ref()
+            .expect("Couldn't determine app directory");
 
         if !app_dir_path.exists() {
             std::fs::create_dir(&app_dir_path).expect("Couldn't create app directory");

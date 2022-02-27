@@ -1,4 +1,4 @@
-use crate::app_data::{AppData};
+use crate::app_data::AppData;
 use tauri::{command, AppHandle};
 
 #[command]

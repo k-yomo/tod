@@ -1,26 +1,24 @@
 #![cfg_attr(
-all(not(debug_assertions), target_os = "windows"),
-windows_subsystem = "windows"
+    all(not(debug_assertions), target_os = "windows"),
+    windows_subsystem = "windows"
 )]
 
-use tauri::api::{shell};
-use tauri::{
-    CustomMenuItem, Manager, Menu, MenuEntry, MenuItem, Submenu
-};
+use tauri::api::shell;
+use tauri::{CustomMenuItem, Manager, Menu, MenuEntry, MenuItem, Submenu};
 
-mod cmd;
 mod app_data;
+mod cmd;
 
 fn main() {
     let ctx = tauri::generate_context!();
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
-      cmd::get_markdown,
-      cmd::save_markdown,
-    ])
+            cmd::get_markdown,
+            cmd::save_markdown,
+        ])
         .menu(Menu::with_items([
             #[cfg(target_os = "macos")]
-                MenuEntry::Submenu(Submenu::new(
+            MenuEntry::Submenu(Submenu::new(
                 &ctx.package_info().name,
                 Menu::with_items([
                     MenuItem::About(ctx.package_info().name.clone()).into(),
@@ -44,7 +42,7 @@ fn main() {
                     MenuItem::Copy.into(),
                     MenuItem::Paste.into(),
                     #[cfg(not(target_os = "macos"))]
-                        MenuItem::Separator.into(),
+                    MenuItem::Separator.into(),
                     MenuItem::SelectAll.into(),
                 ]),
             )),
