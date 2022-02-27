@@ -55,10 +55,12 @@
     "windows": [
       {
         "title": "Tod",
-        "width": 800,
+        "width": 400,
         "height": 600,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "x": 0,
+        "y": 0
       }
     ],
     "security": {
