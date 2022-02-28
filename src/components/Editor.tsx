@@ -26,7 +26,7 @@ export default function Editor({ initialText }: { initialText: string }) {
         extensions: [
             EditorView.domEventHandlers({
                 beforeinput: (e) => {
-                    const preventInputModes = ["normal", "visual block"]
+                    const preventInputModes = ["normal", "visual", "visual block"]
                     if (curView && (!getCM(curView)?.state?.vim.mode || preventInputModes.includes(getCM(curView)?.state?.vim.mode))) {
                         e.preventDefault()
                     }
@@ -56,8 +56,6 @@ export default function Editor({ initialText }: { initialText: string }) {
     }, [editorRef.current]);
 
     return (
-        <div>
-            <div id="editor" ref={editorRef as any}/>
-        </div>
+        <div id="editor" ref={editorRef as any}/>
     )
 }
