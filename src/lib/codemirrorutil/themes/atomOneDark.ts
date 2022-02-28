@@ -163,7 +163,7 @@ export const oneDarkHighlightStyle = HighlightStyle.define([
     marginBottom: "3px",
     paddingBottom: "1px",
     borderBottom: "1px solid #475569",
-    fontSize: "1.6rem",
+    fontSize: "1.4rem",
     color: slate['100'],
   },
   {
@@ -172,12 +172,12 @@ export const oneDarkHighlightStyle = HighlightStyle.define([
     marginBottom: "3px",
     paddingBottom: "1px",
     borderBottom: "1px solid #475569",
-    fontSize: "1.4rem",
+    fontSize: "1.3rem",
     color: slate['100'],
   },
   {
     tag: t.heading3,
-    fontSize: "1.25rem",
+    fontSize: "1.2rem",
     color: slate['100'],
   },
   {
