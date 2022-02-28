@@ -6,7 +6,7 @@ import {basicSetup} from "@codemirror/basic-setup";
 import {markdown, markdownLanguage} from "@codemirror/lang-markdown";
 import {getCM, vim} from "@replit/codemirror-vim";
 import {languages} from "@codemirror/language-data";
-import {oneDark} from "@codemirror/theme-one-dark";
+import {oneDark} from "../lib/codemirrorutil/themes/atomOneDark";
 import {useDebounce} from "../lib/debounce";
 import {saveMarkdown} from "../services/storage";
 
