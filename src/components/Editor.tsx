@@ -26,7 +26,8 @@ export default function Editor({ initialText }: { initialText: string }) {
         extensions: [
             EditorView.domEventHandlers({
                 beforeinput: (e) => {
-                    if (curView && getCM(curView)?.state?.vim.mode == "normal") {
+                    const preventInputModes = ["normal", "visual block"]
+                    if (curView && (!getCM(curView)?.state?.vim.mode || preventInputModes.includes(getCM(curView)?.state?.vim.mode))) {
                         e.preventDefault()
                     }
                 },
