@@ -1,8 +1,8 @@
 import {h} from "preact";
 import {useEffect, useState} from "preact/hooks";
 import {getMarkdown} from "./services/storage";
-import './styles/globals.css'
 import Editor from "./components/Editor";
+import './styles/globals.css'
 
 export function App() {
     const [markdownText, setMarkdown] = useState("")

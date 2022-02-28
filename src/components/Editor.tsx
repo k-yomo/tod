@@ -56,6 +56,6 @@ export default function Editor({ initialText }: { initialText: string }) {
     }, [editorRef.current]);
 
     return (
-        <div id="editor" ref={editorRef as any}/>
+      <div id="editor" ref={editorRef as any}/>
     )
 }

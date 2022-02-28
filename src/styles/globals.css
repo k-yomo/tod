@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 body {
     font-size: 16px;
     background-color: #20252C;
+    @apply  text-slate-300;
 }

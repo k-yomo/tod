@@ -4,7 +4,7 @@ import { HighlightStyle, tags as t } from "@codemirror/highlight"
 
 // Using https://github.com/one-dark/vscode-one-dark-theme/ as reference for the colors
 
-const stale = {
+const slate = {
   '100': "#f1f5f9",
   '300': "#cbd5e1"
 }
@@ -35,7 +35,7 @@ const chalky = "#e5c07b",
 /// The editor theme styles for One Dark.
 export const oneDarkTheme = EditorView.theme({
   "&": {
-    color: stale['300'],
+    color: slate['300'],
     backgroundColor: background,
   },
 
@@ -164,7 +164,7 @@ export const oneDarkHighlightStyle = HighlightStyle.define([
     paddingBottom: "1px",
     borderBottom: "1px solid #475569",
     fontSize: "1.6rem",
-    color: stale['100'],
+    color: slate['100'],
   },
   {
     tag: t.heading2,
@@ -173,17 +173,17 @@ export const oneDarkHighlightStyle = HighlightStyle.define([
     paddingBottom: "1px",
     borderBottom: "1px solid #475569",
     fontSize: "1.4rem",
-    color: stale['100'],
+    color: slate['100'],
   },
   {
     tag: t.heading3,
     fontSize: "1.25rem",
-    color: stale['100'],
+    color: slate['100'],
   },
   {
     tag: t.heading4,
     fontSize: "1.1rem",
-    color: stale['100'],
+    color: slate['100'],
   },
   {
     tag: [t.atom, t.bool, t.special(t.variableName)],
