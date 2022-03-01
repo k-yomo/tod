@@ -8,3 +8,7 @@ body {
     background-color: #20252C;
     @apply  text-slate-300;
 }
+
+.cm-line {
+    white-space: pre-wrap;
+}
