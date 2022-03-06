@@ -5,7 +5,7 @@ import Editor from "./components/Editor";
 import './styles/globals.css'
 
 export function App() {
-    const [markdownText, setMarkdown] = useState("")
+    const [markdown, setMarkdown] = useState("")
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -20,6 +20,6 @@ export function App() {
     }
 
     return (
-        <Editor initialText={markdownText} />
+        <Editor initialMarkdown={markdown}/>
     )
 }

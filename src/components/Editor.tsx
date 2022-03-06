@@ -11,14 +11,18 @@ import { useDebounce } from '../lib/debounce';
 import { saveMarkdown } from '../services/storage';
 import { hyperLinkPlugin } from '../lib/codemirrorutil/view/hyperLinkPlugin';
 
-export default function Editor({ initialText }: { initialText: string }) {
+interface Props {
+  initialMarkdown: string;
+}
+
+export default function Editor({ initialMarkdown }: Props) {
   const editorRef = useRef<HTMLDivElement>();
   const [curView, setView] = useState<EditorView | undefined>();
   const [markdownText, setMarkdown] = useState('');
   const debouncedMarkdown = useDebounce(markdownText, 1000);
 
   const { setContainer, view } = useCodeMirror({
-    value: initialText,
+    value: initialMarkdown,
     basicSetup: false,
     container: editorRef.current,
     onUpdate: (viewUpdate) => {
