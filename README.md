@@ -1,5 +1,5 @@
 # Tod
-Tod is a bare minimum markdown based desktop TODO app with Vim key bindings.
+Tod is a bare minimum markdown based desktop TODO editor with Vim key bindings.
 
-https://user-images.githubusercontent.com/24503508/155892484-e0d613e6-18b3-43fe-a972-1e11045a70da.mov
+https://user-images.githubusercontent.com/24503508/156913767-e4387cfa-90ef-4c88-a614-a68083950b9a.mp4
 
