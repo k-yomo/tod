@@ -9,6 +9,7 @@ import { languages } from '@codemirror/language-data';
 import { oneDark } from '../lib/codemirrorutil/themes/atomOneDark';
 import { useDebounce } from '../lib/debounce';
 import { saveMarkdown } from '../services/storage';
+import { hyperLinkPlugin } from '../lib/codemirrorutil/view/hyperLinkPlugin';
 
 export default function Editor({ initialText }: { initialText: string }) {
   const editorRef = useRef<HTMLDivElement>();
@@ -43,6 +44,7 @@ export default function Editor({ initialText }: { initialText: string }) {
         base: markdownLanguage,
         codeLanguages: languages,
       }),
+      hyperLinkPlugin,
     ],
     theme: oneDark,
   });

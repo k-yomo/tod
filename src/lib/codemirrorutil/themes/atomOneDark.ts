@@ -100,6 +100,10 @@ export const oneDarkTheme = EditorView.theme({
       color: ivory,
     },
   },
+  ".cmt-url": {
+    color: cyan['500'],
+    textDecoration: "underline",
+  }
 }, { dark: true })
 
 /// The highlighting style for code in the One Dark theme.
